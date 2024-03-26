@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Mar 26 11:46:26 2024
+# Process ID: 3486861
+# Current directory: /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/nms/xsim_script.tcl}
+# Log file: /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/sim/verilog/xsim.log
+# Journal file: /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/sim/verilog/xsim.jou
+# Running On: he-MS-7C22, OS: Linux, CPU Frequency: 1791.155 MHz, CPU Physical cores: 8, Host memory: 16704 MB
+#-----------------------------------------------------------
+source xsim.dir/nms/xsim_script.tcl
+open_wave_config nms_dataflow_ana.wcfg
+source nms.tcl

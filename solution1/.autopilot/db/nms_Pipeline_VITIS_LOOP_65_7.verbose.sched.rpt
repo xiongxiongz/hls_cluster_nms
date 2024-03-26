@@ -1,0 +1,687 @@
+
+
+================================================================
+== Vitis HLS Report for 'nms_Pipeline_VITIS_LOOP_65_7'
+================================================================
+* Date:           Tue Mar 26 11:43:36 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        cluster_nms_impl
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       45|      143|  0.450 us|  1.430 us|   45|  143|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_65_7  |       43|      141|        44|          1|          1|  1 ~ 99|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 44
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 44
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 44, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.04>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 47 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 48 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%i_2_cast_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %i_2_cast"   --->   Operation 49 'read' 'i_2_cast_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%mul1_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mul1"   --->   Operation 50 'read' 'mul1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%bboxes_info_y2_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %bboxes_info_y2_load"   --->   Operation 51 'read' 'bboxes_info_y2_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%tmp = read i23 @_ssdm_op_Read.ap_auto.i23, i23 %empty"   --->   Operation 52 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%bitcast_ln70_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %bitcast_ln70"   --->   Operation 53 'read' 'bitcast_ln70_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%bboxes_info_x2_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %bboxes_info_x2_load"   --->   Operation 54 'read' 'bboxes_info_x2_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_1 = read i23 @_ssdm_op_Read.ap_auto.i23, i23 %empty_23"   --->   Operation 55 'read' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%bitcast_ln69_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %bitcast_ln69"   --->   Operation 56 'read' 'bitcast_ln69_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%bboxes_info_y1_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %bboxes_info_y1_load"   --->   Operation 57 'read' 'bboxes_info_y1_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_2 = read i23 @_ssdm_op_Read.ap_auto.i23, i23 %empty_22"   --->   Operation 58 'read' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%bitcast_ln68_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %bitcast_ln68"   --->   Operation 59 'read' 'bitcast_ln68_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%bboxes_info_x1_load_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %bboxes_info_x1_load"   --->   Operation 60 'read' 'bboxes_info_x1_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_18 = read i23 @_ssdm_op_Read.ap_auto.i23, i23 %empty_21"   --->   Operation 61 'read' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%bitcast_ln67_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %bitcast_ln67"   --->   Operation 62 'read' 'bitcast_ln67_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%i_2_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %i_2"   --->   Operation 63 'read' 'i_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%i_2_cast_cast = zext i7 %i_2_cast_read"   --->   Operation 64 'zext' 'i_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (1.58ns)   --->   "%store_ln65 = store i7 0, i7 %j" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 65 'store' 'store_ln65' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 66 [1/1] (1.58ns)   --->   "%store_ln0 = store i13 0, i13 %phi_mul"   --->   Operation 66 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body167"   --->   Operation 67 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%j_1 = load i7 %j" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 68 'load' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (1.87ns)   --->   "%icmp_ln65 = icmp_eq  i7 %j_1, i7 %i_2_read" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 69 'icmp' 'icmp_ln65' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 70 [1/1] (1.87ns)   --->   "%add_ln65 = add i7 %j_1, i7 1" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 70 'add' 'add_ln65' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln65 = br i1 %icmp_ln65, void %for.body167.split, void %for.inc295.exitStub" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 71 'br' 'br_ln65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln65 = zext i7 %j_1" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 72 'zext' 'zext_ln65' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%bboxes_info_x1_addr = getelementptr i32 %bboxes_info_x1, i64 0, i64 %zext_ln65" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 73 'getelementptr' 'bboxes_info_x1_addr' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_1 : Operation 74 [2/2] (3.25ns)   --->   "%bboxes_info_x1_load_1 = load i7 %bboxes_info_x1_addr" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 74 'load' 'bboxes_info_x1_load_1' <Predicate = (!icmp_ln65)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%bboxes_info_y1_addr = getelementptr i32 %bboxes_info_y1, i64 0, i64 %zext_ln65" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 75 'getelementptr' 'bboxes_info_y1_addr' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_1 : Operation 76 [2/2] (3.25ns)   --->   "%bboxes_info_y1_load_1 = load i7 %bboxes_info_y1_addr" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 76 'load' 'bboxes_info_y1_load_1' <Predicate = (!icmp_ln65)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%bboxes_info_x2_addr = getelementptr i32 %bboxes_info_x2, i64 0, i64 %zext_ln65" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 77 'getelementptr' 'bboxes_info_x2_addr' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_1 : Operation 78 [2/2] (3.25ns)   --->   "%bboxes_info_x2_load_1 = load i7 %bboxes_info_x2_addr" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 78 'load' 'bboxes_info_x2_load_1' <Predicate = (!icmp_ln65)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%bboxes_info_y2_addr = getelementptr i32 %bboxes_info_y2, i64 0, i64 %zext_ln65" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 79 'getelementptr' 'bboxes_info_y2_addr' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_1 : Operation 80 [2/2] (3.25ns)   --->   "%bboxes_info_y2_load_1 = load i7 %bboxes_info_y2_addr" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 80 'load' 'bboxes_info_y2_load_1' <Predicate = (!icmp_ln65)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%map_arr_addr = getelementptr i13 %map_arr, i64 0, i64 %zext_ln65" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 81 'getelementptr' 'map_arr_addr' <Predicate = (!icmp_ln65)> <Delay = 0.00>
+ST_1 : Operation 82 [2/2] (3.25ns)   --->   "%map_arr_load = load i7 %map_arr_addr" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 82 'load' 'map_arr_load' <Predicate = (!icmp_ln65)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 13> <Depth = 99> <ROM>
+ST_1 : Operation 83 [1/1] (1.58ns)   --->   "%store_ln65 = store i7 %add_ln65, i7 %j" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 83 'store' 'store_ln65' <Predicate = (!icmp_ln65)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 7.06>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%phi_mul_load = load i13 %phi_mul" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 84 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 85 [1/2] (3.25ns)   --->   "%bboxes_info_x1_load_1 = load i7 %bboxes_info_x1_addr" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 85 'load' 'bboxes_info_x1_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_2 : Operation 86 [1/2] (3.25ns)   --->   "%bboxes_info_y1_load_1 = load i7 %bboxes_info_y1_addr" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 86 'load' 'bboxes_info_y1_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_2 : Operation 87 [1/2] (3.25ns)   --->   "%bboxes_info_x2_load_1 = load i7 %bboxes_info_x2_addr" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 87 'load' 'bboxes_info_x2_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_2 : Operation 88 [1/2] (3.25ns)   --->   "%bboxes_info_y2_load_1 = load i7 %bboxes_info_y2_addr" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 88 'load' 'bboxes_info_y2_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_2 : Operation 89 [1/1] (1.67ns)   --->   "%add_ln80_1 = add i13 %phi_mul_load, i13 100" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 89 'add' 'add_ln80_1' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln80 = add i13 %i_2_cast_cast, i13 %phi_mul_load" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 90 'add' 'add_ln80' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 91 [1/2] (3.25ns)   --->   "%map_arr_load = load i7 %map_arr_addr" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 91 'load' 'map_arr_load' <Predicate = true> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 13> <Depth = 99> <ROM>
+ST_2 : Operation 92 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%sub_ln80 = sub i13 %add_ln80, i13 %map_arr_load" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 92 'sub' 'sub_ln80' <Predicate = true> <Delay = 3.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 93 [1/1] (1.58ns)   --->   "%store_ln80 = store i13 %add_ln80_1, i13 %phi_mul" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 93 'store' 'store_ln80' <Predicate = true> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 7.25>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%bitcast_ln67_1 = bitcast i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 94 'bitcast' 'bitcast_ln67_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln67_1, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 95 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%trunc_ln67 = trunc i32 %bitcast_ln67_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 96 'trunc' 'trunc_ln67' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (1.91ns)   --->   "%icmp_ln67_2 = icmp_ne  i8 %tmp_4, i8 255" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 97 'icmp' 'icmp_ln67_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 98 [1/1] (2.28ns)   --->   "%icmp_ln67_3 = icmp_eq  i23 %trunc_ln67, i23 0" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 98 'icmp' 'icmp_ln67_3' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 99 [2/2] (5.43ns)   --->   "%tmp_5 = fcmp_ogt  i32 %bboxes_info_x1_load_read, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 99 'fcmp' 'tmp_5' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%bitcast_ln68_1 = bitcast i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 100 'bitcast' 'bitcast_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln68_1, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 101 'partselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i32 %bitcast_ln68_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 102 'trunc' 'trunc_ln68' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (1.91ns)   --->   "%icmp_ln68_2 = icmp_ne  i8 %tmp_7, i8 255" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 103 'icmp' 'icmp_ln68_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [1/1] (2.28ns)   --->   "%icmp_ln68_3 = icmp_eq  i23 %trunc_ln68, i23 0" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 104 'icmp' 'icmp_ln68_3' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 105 [2/2] (5.43ns)   --->   "%tmp_8 = fcmp_ogt  i32 %bboxes_info_y1_load_read, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 105 'fcmp' 'tmp_8' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%bitcast_ln69_1 = bitcast i32 %bboxes_info_x2_load_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 106 'bitcast' 'bitcast_ln69_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln69_1, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 107 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%trunc_ln69 = trunc i32 %bitcast_ln69_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 108 'trunc' 'trunc_ln69' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (1.91ns)   --->   "%icmp_ln69_2 = icmp_ne  i8 %tmp_s, i8 255" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 109 'icmp' 'icmp_ln69_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 110 [1/1] (2.28ns)   --->   "%icmp_ln69_3 = icmp_eq  i23 %trunc_ln69, i23 0" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 110 'icmp' 'icmp_ln69_3' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 111 [2/2] (5.43ns)   --->   "%tmp_10 = fcmp_olt  i32 %bboxes_info_x2_load_read, i32 %bboxes_info_x2_load_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 111 'fcmp' 'tmp_10' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%bitcast_ln70_1 = bitcast i32 %bboxes_info_y2_load_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 112 'bitcast' 'bitcast_ln70_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_12 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln70_1, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 113 'partselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%trunc_ln70 = trunc i32 %bitcast_ln70_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 114 'trunc' 'trunc_ln70' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (1.91ns)   --->   "%icmp_ln70_2 = icmp_ne  i8 %tmp_12, i8 255" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 115 'icmp' 'icmp_ln70_2' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 116 [1/1] (2.28ns)   --->   "%icmp_ln70_3 = icmp_eq  i23 %trunc_ln70, i23 0" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 116 'icmp' 'icmp_ln70_3' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 117 [2/2] (5.43ns)   --->   "%tmp_13 = fcmp_olt  i32 %bboxes_info_y2_load_read, i32 %bboxes_info_y2_load_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 117 'fcmp' 'tmp_13' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 118 [5/5] (7.25ns)   --->   "%sub4 = fsub i32 %bboxes_info_x2_load_1, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 118 'fsub' 'sub4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 119 [5/5] (7.25ns)   --->   "%sub5 = fsub i32 %bboxes_info_y2_load_1, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 119 'fsub' 'sub5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.25>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i8 @_ssdm_op_PartSelect.i8.i31.i32.i32, i31 %bitcast_ln67_read, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 120 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (1.91ns)   --->   "%icmp_ln67 = icmp_ne  i8 %tmp_3, i8 255" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 121 'icmp' 'icmp_ln67' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 122 [1/1] (2.28ns)   --->   "%icmp_ln67_1 = icmp_eq  i23 %tmp_18, i23 0" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 122 'icmp' 'icmp_ln67_1' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node and_ln67_1)   --->   "%or_ln67 = or i1 %icmp_ln67_1, i1 %icmp_ln67" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 123 'or' 'or_ln67' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 124 [1/1] (0.00ns) (grouped into LUT with out node and_ln67_1)   --->   "%or_ln67_1 = or i1 %icmp_ln67_3, i1 %icmp_ln67_2" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 124 'or' 'or_ln67_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node and_ln67_1)   --->   "%and_ln67 = and i1 %or_ln67, i1 %or_ln67_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 125 'and' 'and_ln67' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [1/2] (5.43ns)   --->   "%tmp_5 = fcmp_ogt  i32 %bboxes_info_x1_load_read, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 126 'fcmp' 'tmp_5' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 127 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln67_1 = and i1 %and_ln67, i1 %tmp_5" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 127 'and' 'and_ln67_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i8 @_ssdm_op_PartSelect.i8.i31.i32.i32, i31 %bitcast_ln68_read, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 128 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 129 [1/1] (1.91ns)   --->   "%icmp_ln68 = icmp_ne  i8 %tmp_6, i8 255" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 129 'icmp' 'icmp_ln68' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 130 [1/1] (2.28ns)   --->   "%icmp_ln68_1 = icmp_eq  i23 %tmp_2, i23 0" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 130 'icmp' 'icmp_ln68_1' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node and_ln68_1)   --->   "%or_ln68 = or i1 %icmp_ln68_1, i1 %icmp_ln68" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 131 'or' 'or_ln68' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node and_ln68_1)   --->   "%or_ln68_1 = or i1 %icmp_ln68_3, i1 %icmp_ln68_2" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 132 'or' 'or_ln68_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 133 [1/1] (0.00ns) (grouped into LUT with out node and_ln68_1)   --->   "%and_ln68 = and i1 %or_ln68, i1 %or_ln68_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 133 'and' 'and_ln68' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 134 [1/2] (5.43ns)   --->   "%tmp_8 = fcmp_ogt  i32 %bboxes_info_y1_load_read, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 134 'fcmp' 'tmp_8' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 135 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln68_1 = and i1 %and_ln68, i1 %tmp_8" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 135 'and' 'and_ln68_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_9 = partselect i8 @_ssdm_op_PartSelect.i8.i31.i32.i32, i31 %bitcast_ln69_read, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 136 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 137 [1/1] (1.91ns)   --->   "%icmp_ln69 = icmp_ne  i8 %tmp_9, i8 255" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 137 'icmp' 'icmp_ln69' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 138 [1/1] (2.28ns)   --->   "%icmp_ln69_1 = icmp_eq  i23 %tmp_1, i23 0" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 138 'icmp' 'icmp_ln69_1' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node and_ln69_1)   --->   "%or_ln69 = or i1 %icmp_ln69_1, i1 %icmp_ln69" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 139 'or' 'or_ln69' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node and_ln69_1)   --->   "%or_ln69_1 = or i1 %icmp_ln69_3, i1 %icmp_ln69_2" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 140 'or' 'or_ln69_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node and_ln69_1)   --->   "%and_ln69 = and i1 %or_ln69, i1 %or_ln69_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 141 'and' 'and_ln69' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 142 [1/2] (5.43ns)   --->   "%tmp_10 = fcmp_olt  i32 %bboxes_info_x2_load_read, i32 %bboxes_info_x2_load_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 142 'fcmp' 'tmp_10' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 143 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln69_1 = and i1 %and_ln69, i1 %tmp_10" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 143 'and' 'and_ln69_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_11 = partselect i8 @_ssdm_op_PartSelect.i8.i31.i32.i32, i31 %bitcast_ln70_read, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 144 'partselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 145 [1/1] (1.91ns)   --->   "%icmp_ln70 = icmp_ne  i8 %tmp_11, i8 255" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 145 'icmp' 'icmp_ln70' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 146 [1/1] (2.28ns)   --->   "%icmp_ln70_1 = icmp_eq  i23 %tmp, i23 0" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 146 'icmp' 'icmp_ln70_1' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node and_ln70_1)   --->   "%or_ln70 = or i1 %icmp_ln70_1, i1 %icmp_ln70" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 147 'or' 'or_ln70' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node and_ln70_1)   --->   "%or_ln70_1 = or i1 %icmp_ln70_3, i1 %icmp_ln70_2" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 148 'or' 'or_ln70_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node and_ln70_1)   --->   "%and_ln70 = and i1 %or_ln70, i1 %or_ln70_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 149 'and' 'and_ln70' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 150 [1/2] (5.43ns)   --->   "%tmp_13 = fcmp_olt  i32 %bboxes_info_y2_load_read, i32 %bboxes_info_y2_load_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 150 'fcmp' 'tmp_13' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 151 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln70_1 = and i1 %and_ln70, i1 %tmp_13" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 151 'and' 'and_ln70_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 152 [4/5] (7.25ns)   --->   "%sub4 = fsub i32 %bboxes_info_x2_load_1, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 152 'fsub' 'sub4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 153 [4/5] (7.25ns)   --->   "%sub5 = fsub i32 %bboxes_info_y2_load_1, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 153 'fsub' 'sub5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.25>
+ST_5 : Operation 154 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln67 = select i1 %and_ln67_1, i7 %i_2_read, i7 %j_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 154 'select' 'select_ln67' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 155 [1/1] (0.00ns)   --->   "%zext_ln67 = zext i7 %select_ln67" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 155 'zext' 'zext_ln67' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 156 [1/1] (0.00ns)   --->   "%bboxes_info_x1_addr_1 = getelementptr i32 %bboxes_info_x1, i64 0, i64 %zext_ln67" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 156 'getelementptr' 'bboxes_info_x1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 157 [2/2] (3.25ns)   --->   "%xx1 = load i7 %bboxes_info_x1_addr_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 157 'load' 'xx1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_5 : Operation 158 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln68 = select i1 %and_ln68_1, i7 %i_2_read, i7 %j_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 158 'select' 'select_ln68' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 159 [1/1] (0.00ns)   --->   "%zext_ln68 = zext i7 %select_ln68" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 159 'zext' 'zext_ln68' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "%bboxes_info_y1_addr_1 = getelementptr i32 %bboxes_info_y1, i64 0, i64 %zext_ln68" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 160 'getelementptr' 'bboxes_info_y1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 161 [2/2] (3.25ns)   --->   "%yy1 = load i7 %bboxes_info_y1_addr_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 161 'load' 'yy1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_5 : Operation 162 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln69 = select i1 %and_ln69_1, i7 %i_2_read, i7 %j_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 162 'select' 'select_ln69' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 163 [1/1] (0.00ns)   --->   "%zext_ln69 = zext i7 %select_ln69" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 163 'zext' 'zext_ln69' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 164 [1/1] (0.00ns)   --->   "%bboxes_info_x2_addr_1 = getelementptr i32 %bboxes_info_x2, i64 0, i64 %zext_ln69" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 164 'getelementptr' 'bboxes_info_x2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 165 [2/2] (3.25ns)   --->   "%xx2 = load i7 %bboxes_info_x2_addr_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 165 'load' 'xx2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_5 : Operation 166 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln70 = select i1 %and_ln70_1, i7 %i_2_read, i7 %j_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 166 'select' 'select_ln70' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 167 [1/1] (0.00ns)   --->   "%zext_ln70 = zext i7 %select_ln70" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 167 'zext' 'zext_ln70' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 168 [1/1] (0.00ns)   --->   "%bboxes_info_y2_addr_1 = getelementptr i32 %bboxes_info_y2, i64 0, i64 %zext_ln70" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 168 'getelementptr' 'bboxes_info_y2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 169 [2/2] (3.25ns)   --->   "%yy2 = load i7 %bboxes_info_y2_addr_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 169 'load' 'yy2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_5 : Operation 170 [3/5] (7.25ns)   --->   "%sub4 = fsub i32 %bboxes_info_x2_load_1, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 170 'fsub' 'sub4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 171 [3/5] (7.25ns)   --->   "%sub5 = fsub i32 %bboxes_info_y2_load_1, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 171 'fsub' 'sub5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 172 [1/2] (3.25ns)   --->   "%xx1 = load i7 %bboxes_info_x1_addr_1" [cluster_nms_impl/src/nms_impl.cpp:67]   --->   Operation 172 'load' 'xx1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_6 : Operation 173 [1/2] (3.25ns)   --->   "%yy1 = load i7 %bboxes_info_y1_addr_1" [cluster_nms_impl/src/nms_impl.cpp:68]   --->   Operation 173 'load' 'yy1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_6 : Operation 174 [1/2] (3.25ns)   --->   "%xx2 = load i7 %bboxes_info_x2_addr_1" [cluster_nms_impl/src/nms_impl.cpp:69]   --->   Operation 174 'load' 'xx2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_6 : Operation 175 [1/2] (3.25ns)   --->   "%yy2 = load i7 %bboxes_info_y2_addr_1" [cluster_nms_impl/src/nms_impl.cpp:70]   --->   Operation 175 'load' 'yy2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_6 : Operation 176 [2/5] (7.25ns)   --->   "%sub4 = fsub i32 %bboxes_info_x2_load_1, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 176 'fsub' 'sub4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 177 [2/5] (7.25ns)   --->   "%sub5 = fsub i32 %bboxes_info_y2_load_1, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 177 'fsub' 'sub5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 178 [5/5] (7.25ns)   --->   "%sub = fsub i32 %xx2, i32 %xx1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 178 'fsub' 'sub' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 179 [5/5] (7.25ns)   --->   "%sub3 = fsub i32 %yy2, i32 %yy1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 179 'fsub' 'sub3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 180 [1/5] (7.25ns)   --->   "%sub4 = fsub i32 %bboxes_info_x2_load_1, i32 %bboxes_info_x1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 180 'fsub' 'sub4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 181 [1/5] (7.25ns)   --->   "%sub5 = fsub i32 %bboxes_info_y2_load_1, i32 %bboxes_info_y1_load_1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 181 'fsub' 'sub5' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 182 [4/5] (7.25ns)   --->   "%sub = fsub i32 %xx2, i32 %xx1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 182 'fsub' 'sub' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 183 [4/5] (7.25ns)   --->   "%sub3 = fsub i32 %yy2, i32 %yy1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 183 'fsub' 'sub3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 184 [5/5] (7.25ns)   --->   "%add = fadd i32 %sub4, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 184 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 185 [5/5] (7.25ns)   --->   "%add3 = fadd i32 %sub5, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 185 'fadd' 'add3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 186 [3/5] (7.25ns)   --->   "%sub = fsub i32 %xx2, i32 %xx1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 186 'fsub' 'sub' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 187 [3/5] (7.25ns)   --->   "%sub3 = fsub i32 %yy2, i32 %yy1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 187 'fsub' 'sub3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 188 [4/5] (7.25ns)   --->   "%add = fadd i32 %sub4, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 188 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 189 [4/5] (7.25ns)   --->   "%add3 = fadd i32 %sub5, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 189 'fadd' 'add3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 190 [2/5] (7.25ns)   --->   "%sub = fsub i32 %xx2, i32 %xx1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 190 'fsub' 'sub' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 191 [2/5] (7.25ns)   --->   "%sub3 = fsub i32 %yy2, i32 %yy1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 191 'fsub' 'sub3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 192 [3/5] (7.25ns)   --->   "%add = fadd i32 %sub4, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 192 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 193 [3/5] (7.25ns)   --->   "%add3 = fadd i32 %sub5, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 193 'fadd' 'add3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 194 [1/5] (7.25ns)   --->   "%sub = fsub i32 %xx2, i32 %xx1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 194 'fsub' 'sub' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 195 [1/5] (7.25ns)   --->   "%sub3 = fsub i32 %yy2, i32 %yy1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 195 'fsub' 'sub3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 196 [2/5] (7.25ns)   --->   "%add = fadd i32 %sub4, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 196 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 197 [2/5] (7.25ns)   --->   "%add3 = fadd i32 %sub5, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 197 'fadd' 'add3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.25>
+ST_12 : Operation 198 [5/5] (7.25ns)   --->   "%xdiff = fadd i32 %sub, i32 1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 198 'fadd' 'xdiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 199 [5/5] (7.25ns)   --->   "%ydiff = fadd i32 %sub3, i32 1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 199 'fadd' 'ydiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 200 [1/5] (7.25ns)   --->   "%add = fadd i32 %sub4, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 200 'fadd' 'add' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 201 [1/5] (7.25ns)   --->   "%add3 = fadd i32 %sub5, i32 1" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 201 'fadd' 'add3' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 202 [4/5] (7.25ns)   --->   "%xdiff = fadd i32 %sub, i32 1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 202 'fadd' 'xdiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 203 [4/5] (7.25ns)   --->   "%ydiff = fadd i32 %sub3, i32 1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 203 'fadd' 'ydiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 204 [4/4] (5.70ns)   --->   "%mul = fmul i32 %add, i32 %add3" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 204 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 205 [3/5] (7.25ns)   --->   "%xdiff = fadd i32 %sub, i32 1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 205 'fadd' 'xdiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 206 [3/5] (7.25ns)   --->   "%ydiff = fadd i32 %sub3, i32 1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 206 'fadd' 'ydiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 207 [3/4] (5.70ns)   --->   "%mul = fmul i32 %add, i32 %add3" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 207 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 208 [2/5] (7.25ns)   --->   "%xdiff = fadd i32 %sub, i32 1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 208 'fadd' 'xdiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 209 [2/5] (7.25ns)   --->   "%ydiff = fadd i32 %sub3, i32 1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 209 'fadd' 'ydiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 210 [2/4] (5.70ns)   --->   "%mul = fmul i32 %add, i32 %add3" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 210 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.25>
+ST_16 : Operation 211 [1/5] (7.25ns)   --->   "%xdiff = fadd i32 %sub, i32 1" [cluster_nms_impl/src/nms_impl.cpp:72]   --->   Operation 211 'fadd' 'xdiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 212 [1/5] (7.25ns)   --->   "%ydiff = fadd i32 %sub3, i32 1" [cluster_nms_impl/src/nms_impl.cpp:73]   --->   Operation 212 'fadd' 'ydiff' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 213 [1/4] (5.70ns)   --->   "%mul = fmul i32 %add, i32 %add3" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 213 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 7.25>
+ST_17 : Operation 214 [2/2] (5.43ns)   --->   "%tmp_15 = fcmp_ogt  i32 %xdiff, i32 0" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 214 'fcmp' 'tmp_15' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 215 [2/2] (5.43ns)   --->   "%tmp_17 = fcmp_ogt  i32 %ydiff, i32 0" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 215 'fcmp' 'tmp_17' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 216 [5/5] (7.25ns)   --->   "%add4 = fadd i32 %mul1_read, i32 %mul" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 216 'fadd' 'add4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.25>
+ST_18 : Operation 217 [1/1] (0.00ns)   --->   "%bitcast_ln75 = bitcast i32 %xdiff" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 217 'bitcast' 'bitcast_ln75' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 218 [1/1] (0.00ns)   --->   "%tmp_14 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln75, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 218 'partselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 219 [1/1] (0.00ns)   --->   "%trunc_ln75 = trunc i32 %bitcast_ln75" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 219 'trunc' 'trunc_ln75' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 220 [1/1] (1.91ns)   --->   "%icmp_ln75 = icmp_ne  i8 %tmp_14, i8 255" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 220 'icmp' 'icmp_ln75' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 221 [1/1] (2.28ns)   --->   "%icmp_ln75_1 = icmp_eq  i23 %trunc_ln75, i23 0" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 221 'icmp' 'icmp_ln75_1' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node insection_width)   --->   "%or_ln75 = or i1 %icmp_ln75_1, i1 %icmp_ln75" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 222 'or' 'or_ln75' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 223 [1/2] (5.43ns)   --->   "%tmp_15 = fcmp_ogt  i32 %xdiff, i32 0" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 223 'fcmp' 'tmp_15' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node insection_width)   --->   "%and_ln75 = and i1 %or_ln75, i1 %tmp_15" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 224 'and' 'and_ln75' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 225 [1/1] (0.97ns) (out node of the LUT)   --->   "%insection_width = select i1 %and_ln75, i32 %xdiff, i32 0" [cluster_nms_impl/src/nms_impl.cpp:75]   --->   Operation 225 'select' 'insection_width' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 226 [1/1] (0.00ns)   --->   "%bitcast_ln76 = bitcast i32 %ydiff" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 226 'bitcast' 'bitcast_ln76' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 227 [1/1] (0.00ns)   --->   "%tmp_16 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln76, i32 23, i32 30" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 227 'partselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 228 [1/1] (0.00ns)   --->   "%trunc_ln76 = trunc i32 %bitcast_ln76" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 228 'trunc' 'trunc_ln76' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 229 [1/1] (1.91ns)   --->   "%icmp_ln76 = icmp_ne  i8 %tmp_16, i8 255" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 229 'icmp' 'icmp_ln76' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 230 [1/1] (2.28ns)   --->   "%icmp_ln76_1 = icmp_eq  i23 %trunc_ln76, i23 0" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 230 'icmp' 'icmp_ln76_1' <Predicate = true> <Delay = 2.28> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 231 [1/1] (0.00ns) (grouped into LUT with out node insection_hight)   --->   "%or_ln76 = or i1 %icmp_ln76_1, i1 %icmp_ln76" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 231 'or' 'or_ln76' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 232 [1/2] (5.43ns)   --->   "%tmp_17 = fcmp_ogt  i32 %ydiff, i32 0" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 232 'fcmp' 'tmp_17' <Predicate = true> <Delay = 5.43> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node insection_hight)   --->   "%and_ln76 = and i1 %or_ln76, i1 %tmp_17" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 233 'and' 'and_ln76' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 234 [1/1] (0.97ns) (out node of the LUT)   --->   "%insection_hight = select i1 %and_ln76, i32 %ydiff, i32 0" [cluster_nms_impl/src/nms_impl.cpp:76]   --->   Operation 234 'select' 'insection_hight' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 235 [4/5] (7.25ns)   --->   "%add4 = fadd i32 %mul1_read, i32 %mul" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 235 'fadd' 'add4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 7.25>
+ST_19 : Operation 236 [4/4] (5.70ns)   --->   "%insection_area = fmul i32 %insection_width, i32 %insection_hight" [cluster_nms_impl/src/nms_impl.cpp:77]   --->   Operation 236 'fmul' 'insection_area' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 237 [3/5] (7.25ns)   --->   "%add4 = fadd i32 %mul1_read, i32 %mul" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 237 'fadd' 'add4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 7.25>
+ST_20 : Operation 238 [3/4] (5.70ns)   --->   "%insection_area = fmul i32 %insection_width, i32 %insection_hight" [cluster_nms_impl/src/nms_impl.cpp:77]   --->   Operation 238 'fmul' 'insection_area' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 239 [2/5] (7.25ns)   --->   "%add4 = fadd i32 %mul1_read, i32 %mul" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 239 'fadd' 'add4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 7.25>
+ST_21 : Operation 240 [2/4] (5.70ns)   --->   "%insection_area = fmul i32 %insection_width, i32 %insection_hight" [cluster_nms_impl/src/nms_impl.cpp:77]   --->   Operation 240 'fmul' 'insection_area' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 241 [1/5] (7.25ns)   --->   "%add4 = fadd i32 %mul1_read, i32 %mul" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 241 'fadd' 'add4' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 5.70>
+ST_22 : Operation 242 [1/4] (5.70ns)   --->   "%insection_area = fmul i32 %insection_width, i32 %insection_hight" [cluster_nms_impl/src/nms_impl.cpp:77]   --->   Operation 242 'fmul' 'insection_area' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.25>
+ST_23 : Operation 243 [5/5] (7.25ns)   --->   "%union_area = fsub i32 %add4, i32 %insection_area" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 243 'fsub' 'union_area' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 7.25>
+ST_24 : Operation 244 [4/5] (7.25ns)   --->   "%union_area = fsub i32 %add4, i32 %insection_area" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 244 'fsub' 'union_area' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 7.25>
+ST_25 : Operation 245 [3/5] (7.25ns)   --->   "%union_area = fsub i32 %add4, i32 %insection_area" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 245 'fsub' 'union_area' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.25>
+ST_26 : Operation 246 [2/5] (7.25ns)   --->   "%union_area = fsub i32 %add4, i32 %insection_area" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 246 'fsub' 'union_area' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 7.25>
+ST_27 : Operation 247 [1/5] (7.25ns)   --->   "%union_area = fsub i32 %add4, i32 %insection_area" [cluster_nms_impl/src/nms_impl.cpp:79]   --->   Operation 247 'fsub' 'union_area' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 6.07>
+ST_28 : Operation 248 [16/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 248 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 6.07>
+ST_29 : Operation 249 [15/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 249 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 6.07>
+ST_30 : Operation 250 [14/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 250 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 6.07>
+ST_31 : Operation 251 [13/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 251 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 6.07>
+ST_32 : Operation 252 [12/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 252 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 6.07>
+ST_33 : Operation 253 [11/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 253 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 6.07>
+ST_34 : Operation 254 [10/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 254 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 6.07>
+ST_35 : Operation 255 [9/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 255 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 6.07>
+ST_36 : Operation 256 [8/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 256 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 6.07>
+ST_37 : Operation 257 [7/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 257 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 6.07>
+ST_38 : Operation 258 [6/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 258 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 6.07>
+ST_39 : Operation 259 [5/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 259 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 6.07>
+ST_40 : Operation 260 [4/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 260 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 6.07>
+ST_41 : Operation 261 [3/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 261 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 6.07>
+ST_42 : Operation 262 [2/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 262 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 6.07>
+ST_43 : Operation 263 [1/16] (6.07ns)   --->   "%div = fdiv i32 %insection_area, i32 %union_area" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 263 'fdiv' 'div' <Predicate = true> <Delay = 6.07> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 15> <II = 1> <Delay = 6.07> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 271 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 271 'ret' 'ret_ln0' <Predicate = (icmp_ln65)> <Delay = 0.00>
+
+State 44 <SV = 43> <Delay = 3.25>
+ST_44 : Operation 264 [1/1] (0.00ns)   --->   "%specpipeline_ln66 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [cluster_nms_impl/src/nms_impl.cpp:66]   --->   Operation 264 'specpipeline' 'specpipeline_ln66' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 265 [1/1] (0.00ns)   --->   "%speclooptripcount_ln65 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 99, i64 50" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 265 'speclooptripcount' 'speclooptripcount_ln65' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 266 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 266 'specloopname' 'specloopname_ln65' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 267 [1/1] (0.00ns)   --->   "%zext_ln80 = zext i13 %sub_ln80" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 267 'zext' 'zext_ln80' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 268 [1/1] (0.00ns)   --->   "%iou_matrix_addr = getelementptr i32 %iou_matrix, i64 0, i64 %zext_ln80" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 268 'getelementptr' 'iou_matrix_addr' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 269 [1/1] (3.25ns)   --->   "%store_ln80 = store i32 %div, i13 %iou_matrix_addr" [cluster_nms_impl/src/nms_impl.cpp:80]   --->   Operation 269 'store' 'store_ln80' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4950> <RAM>
+ST_44 : Operation 270 [1/1] (0.00ns)   --->   "%br_ln65 = br void %for.body167" [cluster_nms_impl/src/nms_impl.cpp:65]   --->   Operation 270 'br' 'br_ln65' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.046ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln65', cluster_nms_impl/src/nms_impl.cpp:65) of constant 0 on local variable 'j', cluster_nms_impl/src/nms_impl.cpp:65 [40]  (1.588 ns)
+	'load' operation 7 bit ('j', cluster_nms_impl/src/nms_impl.cpp:65) on local variable 'j', cluster_nms_impl/src/nms_impl.cpp:65 [44]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln65', cluster_nms_impl/src/nms_impl.cpp:65) [45]  (1.870 ns)
+	'store' operation 0 bit ('store_ln65', cluster_nms_impl/src/nms_impl.cpp:65) of variable 'add_ln65', cluster_nms_impl/src/nms_impl.cpp:65 on local variable 'j', cluster_nms_impl/src/nms_impl.cpp:65 [169]  (1.588 ns)
+
+ <State 2>: 7.069ns
+The critical path consists of the following:
+	'load' operation 13 bit ('map_arr_load', cluster_nms_impl/src/nms_impl.cpp:80) on array 'map_arr' [164]  (3.254 ns)
+	'sub' operation 13 bit ('sub_ln80', cluster_nms_impl/src/nms_impl.cpp:80) [165]  (3.815 ns)
+
+ <State 3>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub4', cluster_nms_impl/src/nms_impl.cpp:79) [153]  (7.256 ns)
+
+ <State 4>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub4', cluster_nms_impl/src/nms_impl.cpp:79) [153]  (7.256 ns)
+
+ <State 5>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub4', cluster_nms_impl/src/nms_impl.cpp:79) [153]  (7.256 ns)
+
+ <State 6>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub4', cluster_nms_impl/src/nms_impl.cpp:79) [153]  (7.256 ns)
+
+ <State 7>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', cluster_nms_impl/src/nms_impl.cpp:72) [130]  (7.256 ns)
+
+ <State 8>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', cluster_nms_impl/src/nms_impl.cpp:72) [130]  (7.256 ns)
+
+ <State 9>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', cluster_nms_impl/src/nms_impl.cpp:72) [130]  (7.256 ns)
+
+ <State 10>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', cluster_nms_impl/src/nms_impl.cpp:72) [130]  (7.256 ns)
+
+ <State 11>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', cluster_nms_impl/src/nms_impl.cpp:72) [130]  (7.256 ns)
+
+ <State 12>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('xdiff', cluster_nms_impl/src/nms_impl.cpp:72) [131]  (7.256 ns)
+
+ <State 13>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('xdiff', cluster_nms_impl/src/nms_impl.cpp:72) [131]  (7.256 ns)
+
+ <State 14>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('xdiff', cluster_nms_impl/src/nms_impl.cpp:72) [131]  (7.256 ns)
+
+ <State 15>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('xdiff', cluster_nms_impl/src/nms_impl.cpp:72) [131]  (7.256 ns)
+
+ <State 16>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('xdiff', cluster_nms_impl/src/nms_impl.cpp:72) [131]  (7.256 ns)
+
+ <State 17>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add4', cluster_nms_impl/src/nms_impl.cpp:79) [158]  (7.256 ns)
+
+ <State 18>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add4', cluster_nms_impl/src/nms_impl.cpp:79) [158]  (7.256 ns)
+
+ <State 19>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add4', cluster_nms_impl/src/nms_impl.cpp:79) [158]  (7.256 ns)
+
+ <State 20>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add4', cluster_nms_impl/src/nms_impl.cpp:79) [158]  (7.256 ns)
+
+ <State 21>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('add4', cluster_nms_impl/src/nms_impl.cpp:79) [158]  (7.256 ns)
+
+ <State 22>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('insection_area', cluster_nms_impl/src/nms_impl.cpp:77) [152]  (5.702 ns)
+
+ <State 23>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('union_area', cluster_nms_impl/src/nms_impl.cpp:79) [159]  (7.256 ns)
+
+ <State 24>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('union_area', cluster_nms_impl/src/nms_impl.cpp:79) [159]  (7.256 ns)
+
+ <State 25>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('union_area', cluster_nms_impl/src/nms_impl.cpp:79) [159]  (7.256 ns)
+
+ <State 26>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('union_area', cluster_nms_impl/src/nms_impl.cpp:79) [159]  (7.256 ns)
+
+ <State 27>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('union_area', cluster_nms_impl/src/nms_impl.cpp:79) [159]  (7.256 ns)
+
+ <State 28>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 29>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 30>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 31>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 32>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 33>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 34>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 35>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 36>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 37>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 38>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 39>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 40>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 41>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 42>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 43>: 6.075ns
+The critical path consists of the following:
+	'fdiv' operation 32 bit ('div', cluster_nms_impl/src/nms_impl.cpp:80) [160]  (6.075 ns)
+
+ <State 44>: 3.254ns
+The critical path consists of the following:
+	'getelementptr' operation 13 bit ('iou_matrix_addr', cluster_nms_impl/src/nms_impl.cpp:80) [167]  (0.000 ns)
+	'store' operation 0 bit ('store_ln80', cluster_nms_impl/src/nms_impl.cpp:80) of variable 'div', cluster_nms_impl/src/nms_impl.cpp:80 on array 'iou_matrix' [168]  (3.254 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

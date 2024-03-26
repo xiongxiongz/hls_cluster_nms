@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Mar 26 11:45:43 2024
+# Process ID: 3484451
+# Current directory: /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/ip_tmp/vivado.jou
+# Running On: he-MS-7C22, OS: Linux, CPU Frequency: 4600.258 MHz, CPU Physical cores: 8, Host memory: 16704 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace

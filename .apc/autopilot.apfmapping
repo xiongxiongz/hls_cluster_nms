@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="nms_impl.cpp" path="/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp"/>
+    <originFiles name="nms_impl.h" path="/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.h"/>
+  </source>
+  <testbench>
+    <originFiles name="nms_impl_tb.cpp" path="/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

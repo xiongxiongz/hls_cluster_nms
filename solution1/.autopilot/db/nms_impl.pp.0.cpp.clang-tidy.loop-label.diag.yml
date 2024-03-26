@@ -1,0 +1,130 @@
+---
+MainSourceFile:  /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          56674
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          285090
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          285554
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          286019
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS/2023.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          570666
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
+    FileOffset:      13
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          941071
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_25_2:  '
+    FileOffset:      25
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          941423
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_25_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_3:  '
+    FileOffset:      27
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          941453
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_37_4:  '
+    FileOffset:      37
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          941823
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_37_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_58_5:  '
+    FileOffset:      58
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          942832
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_58_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_63_6:  '
+    FileOffset:      63
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          942936
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_63_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_65_7:  '
+    FileOffset:      65
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          942987
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_65_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_85_8:  '
+    FileOffset:      85
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          944111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_85_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_89_9:  '
+    FileOffset:      89
+    FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/src/nms_impl.cpp
+    Replacements:    
+      - FilePath:        /media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp
+        Offset:          944228
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_89_9: '
+...

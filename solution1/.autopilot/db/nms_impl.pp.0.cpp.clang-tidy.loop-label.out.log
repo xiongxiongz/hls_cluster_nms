@@ -1,0 +1,70 @@
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:1317:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:1317:7: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:2291:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:2291:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:2305:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:2305:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:2319:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:2319:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:3948:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:3948:7: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5762:5: warning: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+    for(index_type i = 0;i<100;i++){
+    ^~~
+    VITIS_LOOP_13_1: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5762:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5774:5: warning: Added loop label VITIS_LOOP_25_2:   [xilinx-label-all-loops]
+    while (gap > 0)
+    ^~~~~
+    VITIS_LOOP_25_2: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5774:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5776:9: warning: Added loop label VITIS_LOOP_27_3:   [xilinx-label-all-loops]
+        for (index_type i = gap; i < 100; i++)
+        ^~~
+        VITIS_LOOP_27_3: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5776:9: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5786:13: warning: Added loop label VITIS_LOOP_37_4:   [xilinx-label-all-loops]
+            while(preIndex>=0 && bboxes_info[preIndex].score < temp.score){
+            ^~~~~
+            VITIS_LOOP_37_4: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5786:13: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5807:5: warning: Added loop label VITIS_LOOP_58_5:   [xilinx-label-all-loops]
+    for (index_type i = 1; i <= 100 -1;i++)
+    ^~~
+    VITIS_LOOP_58_5: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5807:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5812:5: warning: Added loop label VITIS_LOOP_63_6:   [xilinx-label-all-loops]
+    for (index_type i = 1; i < 100; i++)
+    ^~~
+    VITIS_LOOP_63_6: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5812:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5814:9: warning: Added loop label VITIS_LOOP_65_7:   [xilinx-label-all-loops]
+        for(index_type j = 0;j < i;j++){
+        ^~~
+        VITIS_LOOP_65_7: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5814:9: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5834:5: warning: Added loop label VITIS_LOOP_85_8:   [xilinx-label-all-loops]
+    for (index_type i = 1; i < 100; i++)
+    ^~~
+    VITIS_LOOP_85_8: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5834:5: note: FIX-IT applied suggested code changes
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5838:9: warning: Added loop label VITIS_LOOP_89_9:   [xilinx-label-all-loops]
+        for (index_type j = 1; j < i; j++)
+        ^~~
+        VITIS_LOOP_89_9: 
+/media/he/c6c60fc3-65e5-407b-86ac-16ca6e42848f/he/Vitis_HLS_Work/cluster_nms_impl/solution1/.autopilot/db/nms_impl.pp.0.cpp:5838:9: note: FIX-IT applied suggested code changes

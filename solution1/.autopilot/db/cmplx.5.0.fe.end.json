@@ -1,0 +1,77 @@
+{
+    "1": {
+        "name": "nms_Pipeline_2",
+        "file": "nms_impl.cpp",
+        "fileloc": "0",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "nms_Pipeline_VITIS_LOOP_65_7",
+        "file": "cluster_nms_impl\/src\/nms_impl.cpp",
+        "fileloc": "65",
+        "instructions": "149",
+        "total_instructions": "149",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "10"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "nms",
+        "file": "nms_impl.cpp",
+        "fileloc": "4",
+        "instructions": "2436",
+        "total_instructions": "2721",
+        "calls": "1 3 2",
+        "basicblocks": "16",
+        "loads": {
+            "G": "1",
+            "L": "20"
+        },
+        "stores": {
+            "L": "613"
+        },
+        "loops": {
+            "L": "3",
+            "N": "2"
+        }
+    },
+    "3": {
+        "name": "nms_Pipeline_VITIS_LOOP_37_4",
+        "file": "cluster_nms_impl\/src\/nms_impl.cpp",
+        "fileloc": "36",
+        "instructions": "121",
+        "total_instructions": "121",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "19"
+        },
+        "stores": {
+            "L": "32"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 26,
+    "calls": "",
+    "file": "nms_impl.cpp",
+    "fileloc": 4,
+    "instructions": 2441,
+    "loads": {
+      "G": 2,
+      "L": 26,
+      "T": 500
+    },
+    "name": "nms",
+    "stores": {
+      "L": 615,
+      "T": 2
+    },
+    "total_instructions": 2441
+  }
+}
